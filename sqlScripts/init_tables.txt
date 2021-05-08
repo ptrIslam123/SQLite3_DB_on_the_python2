@@ -1,0 +1,43 @@
+
+-- таблица сотрудники
+CREATE TABLE IF NOT EXISTS Employees
+(
+    id_employee     INTEGER,    -- табельный номер сотрудника    
+    first_name      TEXT,       -- имя
+    last_name       TEXT,       -- фамилия
+    middle_name     TEXT,       -- отчество
+    gender          TEXT,       -- пол сотрудника    
+    post            TEXT        -- должность сотрудника
+);
+
+-- таблица мониторинг ЧС
+CREATE TABLE IF NOT EXISTS Monitoring_Center_of_Emergency
+(
+    id_emergency        INTEGER,    -- табельный номер сотрудника    
+    data                TEXT,       -- дата возникновения ЧС
+    time                TEXT,       -- время возникновения ЧС
+    location            TEXT,       -- локация (местоположение) ЧС
+    conclusion          TEXT        -- заключение по ЧС
+);
+-- таблица объект ЧС
+CREATE TABLE IF NOT EXISTS Emergency
+(
+    id_object           INTEGER,    -- идентификатор объекта   
+    first_name          TEXT,       -- имя сотрудника
+    last_name           TEXT,       -- фамилия сотрудника
+    middle_name         TEXT,       -- отчество сотрудника
+    type_of_emergency   TEXT,       -- вид ЧС    
+    ponumber_of_victims TEXT        -- количество пострадавших
+);
+
+
+-- таблица дежурные
+CREATE TABLE IF NOT EXISTS Attemdants
+(
+    id_attemdant    INTEGER,    -- табельный номер сотрудника (дежурного)    
+    first_name      TEXT,       -- имя
+    last_name       TEXT,       -- фамилия
+    middle_name     TEXT,       -- отчество
+    start_of_shift  TEXT,       -- начадл смены
+    end_of_shift    TEXT        -- конец смены
+);

@@ -1,0 +1,11 @@
+
+-- таблица сотрудники
+CREATE TABLE IF NOT EXISTS Employees
+(
+    id_employee     INTEGER,    -- табельный номер сотрудника    
+    first_name      TEXT,       -- имя
+    last_name       TEXT,       -- фамилия
+    middle_name     TEXT,       -- отчество
+    gender          TEXT,       -- пол сотрудника    
+    post            TEXT        -- должность сотрудника
+);

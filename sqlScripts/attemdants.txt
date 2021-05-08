@@ -1,0 +1,11 @@
+
+-- таблица дежурные
+CREATE TABLE IF NOT EXISTS Attemdants
+(
+    id_attemdant    INTEGER,    -- табельный номер сотрудника (дежурного)    
+    first_name      TEXT,       -- имя
+    last_name       TEXT,       -- фамилия
+    middle_name     TEXT,       -- отчество
+    start_of_shift  TEXT,       -- начадл смены
+    end_of_shift    TEXT        -- конец смены
+);

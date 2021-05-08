@@ -1,0 +1,11 @@
+-- таблица объект ЧС
+CREATE TABLE IF NOT EXISTS Emergency
+(
+    id_object           INTEGER,    -- идентификатор объекта   
+    first_name          TEXT,       -- имя сотрудника
+    last_name           TEXT,       -- фамилия сотрудника
+    middle_name         TEXT,       -- отчество сотрудника
+    type_of_emergency   TEXT,       -- вид ЧС    
+    ponumber_of_victims TEXT        -- количество пострадавших
+);
+
