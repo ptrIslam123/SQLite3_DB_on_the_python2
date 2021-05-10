@@ -2,7 +2,7 @@
 -- таблица дежурные
 CREATE TABLE IF NOT EXISTS Attemdants
 (
-    id_attemdant    INTEGER,    -- табельный номер сотрудника (дежурного)    
+    id_attemdant    INTEGER PRIMARY KEY,    -- табельный номер сотрудника (дежурного)    
     first_name      TEXT,       -- имя
     last_name       TEXT,       -- фамилия
     middle_name     TEXT,       -- отчество

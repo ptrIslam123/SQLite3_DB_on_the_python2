@@ -15,6 +15,7 @@ class SqlDriver:
 
     def exec_request(self, sqlRequest):
         self.__cursor.execute(sqlRequest)
+        
 
 
 
@@ -27,6 +28,25 @@ class SqlDriver:
     def exec_files(self, files):
         for file in files:
             self.exec_file(file)
+
+
+    def commit(self):
+        self.__connect.commit()
+
+
+
+    def fetchone(self):
+        return self.__cursor.fetchone()
+
+
+
+    def fetchmany(self):
+        return self.__cursor.fetchmany()
+
+
+    
+    def fetchall(self):
+        return self.__cursor.fetchall()
 
 
     def __readf(self, fname):
