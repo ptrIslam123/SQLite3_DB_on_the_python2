@@ -7,10 +7,14 @@ class Attemdants:
 
     def __init__(self):
         self.__sqlDriver = sql.SqlDriver(
-            "{SQL_DB_DIR_PATH}/attemdants.db".format(SQL_DB_DIR_PATH=SQL_DB_DIR_PATH)
+            "{SQL_DB_DIR_PATH}/attemdants.db".format(
+                SQL_DB_DIR_PATH=SQL_DB_DIR_PATH
+            )
         )
         self.__sqlDriver.exec_file(
-            "{SQL_SCRIPOTS_DIR_PATH}/attemdants.txt".format(SQL_SCRIPOTS_DIR_PATH=SQL_SCRIPOTS_DIR_PATH)
+            "{SQL_SCRIPOTS_DIR_PATH}/attemdants.txt".format(
+                SQL_SCRIPOTS_DIR_PATH=SQL_SCRIPOTS_DIR_PATH
+            )
         )
 
 

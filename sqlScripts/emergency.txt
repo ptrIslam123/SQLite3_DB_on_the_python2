@@ -1,7 +1,7 @@
 -- таблица объект ЧС
 CREATE TABLE IF NOT EXISTS Emergency
 (
-    id_object           INTEGER,    -- идентификатор объекта   
+    id_object           INTEGER PRIMARY KEY,    -- идентификатор объекта   
     first_name          TEXT,       -- имя сотрудника
     last_name           TEXT,       -- фамилия сотрудника
     middle_name         TEXT,       -- отчество сотрудника
