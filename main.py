@@ -16,8 +16,19 @@ def main():
         "100"
     )
 
-    
+    t1.update_by_id(
+        "1",
+        "bbb",
+        "ccc",
+        "fff",
+        "type2",
+        "200"
+    )
 
+    
+    print(t1.select_by_id("1"))
+    
+    print(t1.select_all_records())
 
 if __name__ == "__main__":
     main()

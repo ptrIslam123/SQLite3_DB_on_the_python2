@@ -42,4 +42,73 @@ class Emergency:
                 ponumber_of_victims=ponumber_of_victims
             )
 
-            self.__sqlDriver.exec_request(req) 
+            self.__sqlDriver.exec_request(req)
+
+
+    def update_by_id(self,
+                id_object,
+                first_name,
+                last_name,
+                middle_name,
+                type_of_emergency,    
+                ponumber_of_victims):
+        
+        req = """
+            UPDATE Emergency
+            SET 
+            id_object='{id_object}',
+            first_name='{first_name}',
+            last_name='{last_name}',
+            middle_name='{middle_name}',
+            type_of_emergency='{type_of_emergency}',
+            ponumber_of_victims='{ponumber_of_victims}'
+        """.format(
+            id_object=id_object,
+            first_name=first_name,
+            last_name=last_name,
+            middle_name=middle_name,
+            type_of_emergency=type_of_emergency,
+            ponumber_of_victims=ponumber_of_victims
+        )
+
+        self.__sqlDriver.exec_request(
+            req
+        )
+
+
+    def remove_by_id(self, id_object):
+        
+        req = """
+            DELETE FROM Emergency
+            WHERE id_object='{id_object}'
+        """.format(
+                id_object=id_object
+        )
+
+        self.__sqlDriver.exec_request(
+            req
+        )
+
+
+    def select_by_id(self, id_object):
+
+        req = """
+            SELECT *
+            FROM Emergency
+            WHERE id_object='{id_object}';
+        """.format(id_object=id_object)
+
+        self.__sqlDriver.exec_request(req)
+
+        return self.__sqlDriver.fetchone()
+
+
+    def select_all_records(self):
+        self.__sqlDriver.exec_request(
+            """
+            SELECT *
+            FROM Emergency;
+            """
+        )
+
+        return self.__sqlDriver.fetchall()
