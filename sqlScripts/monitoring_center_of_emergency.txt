@@ -2,7 +2,7 @@
 -- таблица мониторинг ЧС
 CREATE TABLE IF NOT EXISTS Monitoring_Center_of_Emergency
 (
-    id_emergency        INTEGER,    -- табельный номер сотрудника    
+    id_emergency        INTEGER PRIMARY KEY,    -- табельный номер сотрудника    
     data                TEXT,       -- дата возникновения ЧС
     time                TEXT,       -- время возникновения ЧС
     location            TEXT,       -- локация (местоположение) ЧС
